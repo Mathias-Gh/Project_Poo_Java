@@ -1,4 +1,6 @@
-public class demon extends Ennemi{
+package Model.Ennemi;
+
+public class demon extends Ennemi {
     public boolean peutVoler;
     public String description;
 

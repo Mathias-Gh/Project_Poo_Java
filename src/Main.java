@@ -1,3 +1,8 @@
+import Model.Ennemi.demon;
+import Model.Ennemi.geant;
+import Model.Ennemi.sorciere;
+import Model.Personnage.Joueur;
+
 public class Main {
     public static void main(String[] args) {
         sorciere maSorciere= new sorciere("elise", 150, 30);

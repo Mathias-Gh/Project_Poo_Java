@@ -1,3 +1,7 @@
+package Model.Ennemi;
+
+import Model.Personnage.Personnage;
+
 public class sorciere extends Ennemi{
     public String description;
     public boolean peutInvoquerSquelettes;

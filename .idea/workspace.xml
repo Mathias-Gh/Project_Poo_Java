@@ -4,6 +4,22 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
+<<<<<<< HEAD
+    <list default="true" id="5d9fbf07-f24c-4c69-a8f0-2dac3ea5741c" name="Changes" comment="finishing Story 3 abstract class implement interface">
+      <change afterPath="$PROJECT_DIR$/src/Interface/Interactuable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Model/Objet/epee.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Classes/Ennemi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/Ennemi/Ennemi.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Classes/ObjetDuJeu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/Objet/ObjetDuJeu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Classes/Personnage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/Personnage/Personnage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Joueur.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/Personnage/Joueur.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Sous_Classes/armes.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/Objet/armure.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Sous_Classes/potion.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/Objet/potion.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/demon.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/Ennemi/demon.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/geant.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/Ennemi/geant.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sorciere.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/Ennemi/sorciere.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/squelettes.java" beforeDir="false" />
+=======
     <list default="true" id="5d9fbf07-f24c-4c69-a8f0-2dac3ea5741c" name="Changes" comment="Finishing Story2 Create Under class and them attribute.">
       <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
@@ -14,6 +30,7 @@
       <change beforePath="$PROJECT_DIR$/src/demon.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/demon.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/geant.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/geant.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/sorciere.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sorciere.java" afterDir="false" />
+>>>>>>> dev
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,16 +40,20 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
+<<<<<<< HEAD
+=======
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
         <entry key="$PROJECT_DIR$" value="Java_Poo_Story2" />
       </map>
     </option>
+>>>>>>> dev
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MarkdownSettingsMigration">
@@ -54,15 +75,37 @@
     "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+<<<<<<< HEAD
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "story3",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "onboarding.tips.debug.path": "/Users/coding/IdeaProjects/Projet_Poo_Ja/src/Main.java",
+    "vue.rearranger.settings.migration": "true"
+=======
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "git-widget-placeholder": "Java__Poo__Story4",
     "onboarding.tips.debug.path": "/Users/coding/IdeaProjects/Projet_Poo_Ja/src/Main.java"
+>>>>>>> dev
   }
 }]]></component>
-  <component name="RecentsManager">
-    <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="" />
-    </key>
+  <component name="RunManager">
+    <configuration default="true" type="JetRunConfigurationType">
+      <module name="Projet_Poo_Java" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <module name="Projet_Poo_Java" />
+      <option name="filePath" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -72,14 +115,15 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1701854328689</updated>
+      <workItem from="1701866703724" duration="5719000" />
     </task>
-    <task id="LOCAL-00001" summary="Finishing Story1 Create class and attribute.">
+    <task id="LOCAL-00001" summary="Merge from story 2">
       <option name="closed" value="true" />
-      <created>1701856973561</created>
+      <created>1701866544587</created>
       <option name="number" value="00001" />
       <option name="presentableId" value="LOCAL-00001" />
       <option name="project" value="LOCAL" />
-      <updated>1701856973561</updated>
+      <updated>1701866544587</updated>
     </task>
     <task id="LOCAL-00002" summary="Finishing Story2 Create Under class and them attribute.">
       <option name="closed" value="true" />
@@ -92,32 +136,29 @@
     <option name="localTasksCounter" value="3" />
     <servers />
   </component>
-  <component name="Vcs.Log.Tabs.Properties">
-    <option name="TAB_STATES">
-      <map>
-        <entry key="MAIN">
-          <value>
-            <State>
-              <option name="FILTERS">
-                <map>
-                  <entry key="branch">
-                    <value>
-                      <list>
-                        <option value="Java_Poo_Story2" />
-                      </list>
-                    </value>
-                  </entry>
-                </map>
-              </option>
-            </State>
-          </value>
-        </entry>
-      </map>
-    </option>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
+<<<<<<< HEAD
+    <MESSAGE value="Merge from story 2" />
+    <MESSAGE value="finishing Story 3 abstract class implement interface" />
+    <option name="LAST_COMMIT_MESSAGE" value="finishing Story 3 abstract class implement interface" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/Main.java</url>
+          <line>13</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+=======
     <MESSAGE value="Finishing Story1 Create class and attribute." />
     <MESSAGE value="Finishing Story2 Create Under class and them attribute." />
     <option name="LAST_COMMIT_MESSAGE" value="Finishing Story2 Create Under class and them attribute." />
+>>>>>>> dev
   </component>
 </project>
