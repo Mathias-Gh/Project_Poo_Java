@@ -1,6 +1,6 @@
-package Classes;
+package Model.Ennemi;
 
-public class Personnage {
+public class Ennemi {
     public String nom;
     public int pointsDeVie;
     public int force;
