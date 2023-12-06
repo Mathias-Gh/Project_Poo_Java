@@ -1,7 +1,11 @@
-public class Ennemi {
-    public String nom;
-    public int pointsDeVie;
-    public int force;
+public class Ennemi extends Personnage{
+
+    public Ennemi(String nom1, int pointsDeVie1, int force1) {
+        super(nom1, pointsDeVie1, force1);
+        this.nom = nom1;
+        this.pointsDeVie = pointsDeVie1;
+        this.force = force1;
+    }
 
     public void attaquer() {
 
