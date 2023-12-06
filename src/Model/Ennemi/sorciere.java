@@ -7,7 +7,9 @@ public class sorciere extends Ennemi{
     public boolean peutInvoquerSquelettes;
 
     public sorciere(String nom, int pointsDeVie, int force) {
-        super(nom, pointsDeVie, force);
+        super(nom);
+        super.pointsDeVie = 10;
+        super.force = 1;
     }
 
     public void invoquer(){

@@ -5,10 +5,8 @@ public class Personnage {
     public int pointsDeVie;
     public int force;
 
-    public Personnage(String nom, int pointsDeVie, int force) {
+    public Personnage(String nom) {
         this.nom = nom;
-        this.pointsDeVie = pointsDeVie;
-        this.force = force;
     }
 
     public void attaquer() {

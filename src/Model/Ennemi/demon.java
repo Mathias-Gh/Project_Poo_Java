@@ -4,8 +4,10 @@ public class demon extends Ennemi {
     public boolean peutVoler;
     public String description;
 
-    public demon(String nom, int pointsDeVie, int force) {
-        super(nom, pointsDeVie, force);
+    public demon(String nom) {
+        super(nom);
+        super.pointsDeVie = 20;
+        super.force = 5;
     }
 
     public void voler (){
