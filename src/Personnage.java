@@ -1,5 +1,3 @@
-package Model.Personnage;
-
 public class Personnage {
     public String nom;
     public int pointsDeVie;

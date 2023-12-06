@@ -1,6 +1,4 @@
-package Model.Personnage;
-
-public class Joueur extends Personnage {
+public class Joueur extends Personnage{
     public String Pseudo;
     public Boolean genre;
 

@@ -1,5 +1,3 @@
-package Model.Ennemi;
-
 public class Ennemi {
     public String nom;
     public int pointsDeVie;
