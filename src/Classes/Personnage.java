@@ -1,4 +1,6 @@
-public class Ennemi {
+package Classes;
+
+public class Personnage {
     public String nom;
     public int pointsDeVie;
     public int force;
