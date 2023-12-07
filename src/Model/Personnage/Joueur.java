@@ -6,18 +6,27 @@ public class Joueur extends Personnage {
     public Joueur(String nom) {
         super(nom);
         super.pointsDeVie = 10;
-        super.force = 2;
     }
 
-    public void equiper(){
-
+    @Override
+    public void attaquer() {
+        // Utiliser épée
     }
-    public void utiliser(){
 
+    @Override
+    public void defendre() {
+        // Utiliser armure
     }
+
     @Override
     public void profil () {
-        System.out.println("Vous vous appellez " + nom + " vous avez " +
-                pointsDeVie + " points de vie " + "et vous avez " + force + " de force ");
+        System.out.println("-----Profil-----");
+        System.out.println("Nom: " + nom);
+        System.out.println("Points de vie: " + pointsDeVie);
+        System.out.println("Niveau: " + niveau);
+    }
+
+    public static int getNiveau() {
+        return niveau;
     }
 }

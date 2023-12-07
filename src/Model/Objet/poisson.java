@@ -1,15 +1,13 @@
 package Model.Objet;
 import Interface.Interactuable;
 
-public class potion extends ObjetDuJeu implements Interactuable {
+public class poisson extends ObjetDuJeu implements Interactuable {
     public String nom;
-    public String description;
+    public String description = "Soigne 5 HP";
     public int durabilite = 1;
 
-    public potion(String nom, String description, int durabilite) {
+    public poisson(String nom) {
         this.nom = nom;
-        this.description = description;
-        this.durabilite = durabilite;
     }
 
     @Override

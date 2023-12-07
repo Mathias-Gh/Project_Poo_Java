@@ -2,14 +2,11 @@ package Model.Objet;
 
 import Interface.Interactuable;
 
-public class armure extends ObjetDuJeu implements Interactuable {
-    public String nom;
-    public String description;
-    public int durabilite;
-    public armure(String nom, String description, int durabilite) {
+public class armure_fer extends ObjetDuJeu implements Interactuable {
+    public armure_fer(String nom) {
         this.nom = nom;
-        this.description = description;
-        this.durabilite = durabilite;
+        this.description = "Protège 30% des dégats reçu";
+        this.durabilite = 20;
     }
 
     @Override

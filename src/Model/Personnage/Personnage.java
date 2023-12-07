@@ -1,22 +1,15 @@
 package Model.Personnage;
 
-public class Personnage {
+public abstract class Personnage {
     public String nom;
     public int pointsDeVie;
-    public int force;
+    public static int niveau = 1;
 
     public Personnage(String nom) {
         this.nom = nom;
     }
 
-    public void attaquer() {
-
-    }
-    public void defendre() {
-
-    }
-    public void profil () {
-        System.out.println("Le personnage s'appelle " + nom + " il a " +
-                pointsDeVie + " points de vie " + "et il a " + force + " de force ");
-    }
+    public abstract void attaquer();
+    public abstract void defendre();
+    public abstract void profil ();
 }

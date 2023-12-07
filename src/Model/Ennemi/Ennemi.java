@@ -14,4 +14,9 @@ public class Ennemi extends Personnage {
     public void defendre() {
 
     }
+
+    @Override
+    public void profil() {
+
+    }
 }
