@@ -1,13 +1,26 @@
 package Model.Personnage;
 
+import Utils.Console;
+
 import java.util.ArrayList;
+import java.util.Scanner;
 
 public class Joueur extends Personnage {
-    public int exp = 0;
+    public int PointsDeVie;
+    public int niveau;
+    public ArrayList<String> inventaire;
+    public int fer;
+    public int or;
+    public int diamant;
 
-    public Joueur(String nom) {
+    public Joueur(String nom, int pointsDeVie, int niveau, int fer, int or, int diamant, ArrayList<String> inventaire) {
         super(nom);
-        super.pointsDeVie = 10;
+        this.pointsDeVie = pointsDeVie;
+        this.niveau = niveau;
+        this.fer = fer;
+        this.or = or;
+        this.diamant = diamant;
+        this.inventaire = inventaire;
     }
 
     @Override
@@ -20,29 +33,31 @@ public class Joueur extends Personnage {
         // Utiliser armure
     }
 
+    public int getPointsDeVie() {
+        return PointsDeVie;
+    }
+
+    public int getNiveau() {
+        return niveau;
+    }
+
     @Override
     public void profil () {
-        System.out.println("-----Profil-----");
+        Console.clear();
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("====Profil====");
         System.out.println("Nom: " + nom);
         System.out.println("Points de vie: " + pointsDeVie);
         System.out.println("Niveau: " + niveau);
+        System.out.println("Fer: " + fer);
+        System.out.println("Or: " + or);
+        System.out.println("Diamant: " + diamant);
+        System.out.println();
+        System.out.println("====Inventaire====");
+        System.out.println(inventaire);
+        System.out.println();
+        System.out.println("Quitter ?");
+        scanner.next();
 
-        ArrayList<String> listeInventaire = new ArrayList<String>();
-
-        listeInventaire.add("poisson");
-        listeInventaire.add("poisson");
-        listeInventaire.add("poisson");
-        listeInventaire.add("épée bronze");
-
-        System.out.println("inventaire: " + listeInventaire);
-        try {
-            System.out.println("Inventaire: " + listeInventaire.get(0));
-        } catch (IndexOutOfBoundsException e) {
-            System.out.println("l inventaire est vide");
-        }
-    }
-
-    public static int getNiveau() {
-        return niveau;
     }
 }

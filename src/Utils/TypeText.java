@@ -7,7 +7,7 @@ public class TypeText {
         for(i = 0; i < text.length(); i++){
             System.out.printf("%c", text.charAt(i));
             try{
-                Thread.sleep(100); // Pause de 0.1 seconde entre chaque lettre
+                Thread.sleep(50); // Pause de 0.05 seconde entre chaque lettre
             }catch(InterruptedException ex){
                 Thread.currentThread().interrupt();
             }

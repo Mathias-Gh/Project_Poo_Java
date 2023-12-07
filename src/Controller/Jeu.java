@@ -1,9 +1,15 @@
 package Controller;
 
+import Model.Objet.poulet;
+import Model.Objet.steak;
 import Model.Personnage.Joueur;
 import Utils.Console;
+import Utils.Save;
 import Utils.TypeText;
+import Model.Objet.poisson;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 public class Jeu {
@@ -15,21 +21,75 @@ public class Jeu {
             System.out.println("\n");
             System.out.println("1. Combattre");
             System.out.println("2. Miner");
-            System.out.println("3. Boutique");
-            System.out.println("4. Quitter le jeu");
+            System.out.println("3. Manger");
+            System.out.println("4. Boutique");
+            System.out.println("5. Infos");
+            System.out.println("6. Sauvegarder et quitter le jeu");
             System.out.println("Choisissez une option:");
             int optionJoueur = scanner.nextInt();
             if (optionJoueur == 1) {
                 Combat.start(Player);
-                continue;
             }
             else if (optionJoueur == 2) {
                 // Miner
             }
             else if (optionJoueur == 3) {
-                // Boutique
+                String[] nourriture = {"poisson", "poulet", "steak"};
+                boolean nourritureExist = false;
+                for (String n : nourriture) {
+                    if (!Player.inventaire.contains(n)) {
+                        nourritureExist = true;
+                        break; // Sortir de la boucle dès qu'un aliment est trouvé dans l'inventaire
+                    }
+                }
+
+                if (nourritureExist) {
+                    System.out.println("Voici votre inventaire:");
+                    System.out.println(Player.inventaire);
+                    System.out.println("Que souhaitez-vous manger ?");
+                    String manger = scanner.next();
+                    if (Player.inventaire.contains(manger)) {
+                        switch (manger) {
+                            case "poisson" -> {
+                                poisson poisson = new poisson("poisson");
+                                poisson.interagir(Player);
+                                Player.inventaire.remove("poisson");
+                            }
+                            case "poulet" -> {
+                                poulet poulet = new poulet("poulet");
+                                poulet.interagir(Player);
+                                Player.inventaire.remove("poulet");
+                            }
+                            case "steak" -> {
+                                steak steak = new steak("steak");
+                                steak.interagir(Player);
+                                Player.inventaire.remove("steak");
+                            }
+                        }
+                    }
+                }
+                else {
+                    System.out.println("Vous n'avez pas de nourriture dans votre inventaire.");
+                    try {
+                        Thread.sleep(2000);
+                    } catch (InterruptedException e) {
+                        throw new RuntimeException(e);
+                    }
+                }
             }
             else if (optionJoueur == 4) {
+                Boutique.open(Player);
+                try {
+                    Thread.sleep(2000);
+                } catch (InterruptedException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+            else if (optionJoueur == 5) {
+                Player.profil();
+            }
+            else if (optionJoueur == 6) {
+                Save.game(Player);
                 break;
             }
         }

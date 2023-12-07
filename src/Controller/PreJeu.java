@@ -1,8 +1,10 @@
 package Controller;
 
 import Model.Personnage.Joueur;
+import Utils.ChargerJoueur;
 import Utils.Console;
 
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class PreJeu {
@@ -20,14 +22,17 @@ public class PreJeu {
             if (optionJeu == 1) {
                 System.out.println("Quel est le nom de votre personnage ?");
                 String nomPersonnage = scanner.next();
-                Joueur Player = new Joueur(nomPersonnage);
+                ArrayList<String> inventaire = new ArrayList<>();
+                inventaire.add("poisson");
+                inventaire.add("epee_bois");
+                Joueur Player = new Joueur(nomPersonnage, 10, 1, 0, 0, 0, inventaire);
                 Console.clear(); // Efface la console (le terminal)
                 Jeu.start(Player);
                 break;
             }
             if (optionJeu == 2) {
                 Console.clear(); // Efface la console (le terminal)
-                System.out.println("Charger personnage");
+                Jeu.start(ChargerJoueur.start());
                 break;
             }
             if (optionJeu == 3) {

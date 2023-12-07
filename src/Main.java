@@ -1,5 +1,6 @@
 import Utils.Console;
 import Controller.PreJeu;
+import Controller.Combat;
 
 import java.util.Scanner;
 

@@ -4,13 +4,15 @@ import java.util.ArrayList;
 
 public class warden extends Ennemi {
     public String description;
+    public int pointsDeVie;
+    public int degats;
 
-    public warden(String nom) {
+    public warden(String nom, int pointsDeVie, int degats) {
         super(nom);
-        super.pointsDeVie = 100;
-        super.force = 30;
+        this.description = "Le Warden : C'est le boss du jeu.";
+        this.pointsDeVie = pointsDeVie;
+        this.degats = degats;
     }
-
     public void profil (){
         System.out.println("warden");
 
@@ -28,5 +30,18 @@ public class warden extends Ennemi {
     @Override
     public void attaquer() {
         super.attaquer();
+    }
+    @Override
+    public int getPointsDeVie() {
+        return pointsDeVie;
+    }
+
+    @Override
+    public void setPointsDeVie(int pointsDeVie) {
+        this.pointsDeVie = pointsDeVie;
+    }
+
+    public int getDegats() {
+        return degats;
     }
 }
