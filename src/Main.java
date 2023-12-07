@@ -1,8 +1,5 @@
-import Model.Personnage.Joueur;
-import Model.Ennemi.squelette;
 import Utils.Console;
-import Utils.TypeText;
-import Controller.Jeu;
+import Controller.PreJeu;
 
 import java.util.Scanner;
 
@@ -18,7 +15,7 @@ public class Main {
             int option = scanner.nextInt();
 
             if (option == 1) {
-                Jeu.start();
+                PreJeu.start();
                 break;
             }
             else if (option == 2) {

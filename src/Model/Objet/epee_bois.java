@@ -18,7 +18,7 @@ public class epee_bois extends ObjetDuJeu implements Interactuable {
     @Override
     public void interagir(Ennemi ennemi) {
         durabilite -= 1;
-        ennemi.pointsDeVie -= 5;
+        ennemi.setPointsDeVie(ennemi.getPointsDeVie() - 5);
         if(durabilite < 1) {
             SeCasse();
         }

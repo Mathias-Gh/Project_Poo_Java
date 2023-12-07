@@ -17,4 +17,8 @@ public class zombie extends Ennemi{
     public int getPointsDeVie() {
         return pointsDeVie;
     }
+
+    public void setPointsDeVie(int pointsDeVie) {
+        this.pointsDeVie = pointsDeVie;
+    }
 }

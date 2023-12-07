@@ -9,13 +9,13 @@ import Model.Objet.epee_bois;
 import java.util.Scanner;
 
 public class Combat {
-    public static void start() {
+    public static void start(Joueur joueur) {
         Scanner scanner = new Scanner(System.in);
         if (Joueur.getNiveau() < 2) {
             Console.clear();
             zombie zombie = new zombie("zombie", 10);
             TypeText.write("Vous combattez un zombie.\n");
-            while (zombie.getPointsDeVie() >= 0) {
+            while (zombie.getPointsDeVie() > 0) {
                 System.out.println("C'est votre tour:");
                 System.out.println("1. Attaquer");
                 System.out.println("2. Défendre");
@@ -25,7 +25,6 @@ public class Combat {
                 if (option == 1) {
                     epee_bois epeeBois = new epee_bois("epeeBois");
                     epeeBois.interagir(zombie);
-                    System.out.println(zombie.getPointsDeVie());
                 }
                 else if (option == 2) {
 
@@ -36,6 +35,15 @@ public class Combat {
                 else {
                     break;
                 }
+            }
+            joueur.exp += 2;
+            System.out.println("Vous avez gagné le combat.");
+            System.out.println("Vous avez gagné 2 EXP.");
+            System.out.println("EXP: " + joueur.exp);
+            try {
+                Thread.sleep(3000);
+            } catch (InterruptedException e) {
+                throw new RuntimeException(e);
             }
         }
     }

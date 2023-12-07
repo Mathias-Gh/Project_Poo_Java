@@ -1,7 +1,7 @@
 package Model.Personnage;
 
 public class Joueur extends Personnage {
-    public int piece = 0;
+    public int exp = 0;
 
     public Joueur(String nom) {
         super(nom);
