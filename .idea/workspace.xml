@@ -5,19 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bba6e573-1cb0-4109-969b-0594877549e7" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Utils/Console.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Utils/TypeText.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/Project_Poo_Java.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Projet_Poo_Java.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Model/Ennemi/Ennemi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/Ennemi/Ennemi.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Model/Ennemi/demon.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/Ennemi/demon.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Model/Ennemi/geant.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/Ennemi/geant.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Model/Ennemi/sorciere.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/Ennemi/sorciere.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Model/Ennemi/warden.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/Ennemi/warden.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Model/Objet/armure_fer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/Objet/Armure_fer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Model/Objet/armure_or.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/Objet/Armure_or.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Model/Personnage/Joueur.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/Personnage/Joueur.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Model/Personnage/Personnage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/Personnage/Personnage.java" afterDir="false" />
     </list>
@@ -34,6 +24,11 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="dev" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MarkdownSettingsMigration">
@@ -44,6 +39,9 @@
   &quot;associatedIndex&quot;: 3
 }</component>
   <component name="ProjectId" id="2ZAqYDZoBa936R9cyoZJRPRcMfT" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -53,7 +51,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "story5",
+    "git-widget-placeholder": "java__pooStory6",
     "ignore.virus.scanning.warn.message": "true",
     "last_opened_file_path": "C:/Users/pennm/Desktop/JetBrains-Discord-Integration-1.12.0.zip",
     "node.js.detected.package.eslint": "true",

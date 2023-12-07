@@ -36,12 +36,10 @@ public class Joueur extends Personnage {
 
         System.out.println("inventaire: " + listeInventaire);
         try {
-            // Try to access an element at an index that may not exist
-            String item = listeInventaire.get(10);
-            System.out.println("Item at index 10: " + item);
+            String objet = listeInventaire.get(2);
+            System.out.println("objet à l index 10 : " + objet);
         } catch (IndexOutOfBoundsException e) {
-            // Handle the exception if the index is out of bounds
-            System.out.println("Exception: Index is out of bounds");
+            System.out.println("l index est hors limites");
         }
     }
 
