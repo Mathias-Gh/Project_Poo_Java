@@ -30,16 +30,12 @@ public class Combat {
 
                 }
                 else if (option == 3) {
+                }
 
-                }
-                else {
-                    break;
-                }
             }
             joueur.exp += 2;
             System.out.println("Vous avez gagné le combat.");
             System.out.println("Vous avez gagné 2 EXP.");
-            System.out.println("EXP: " + joueur.exp);
             try {
                 Thread.sleep(3000);
             } catch (InterruptedException e) {
