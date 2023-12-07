@@ -3,6 +3,8 @@ package Model.Personnage;
 public abstract class Personnage {
     public String nom;
     public int pointsDeVie;
+
+    public int force;
     public static int niveau = 1;
 
     public Personnage(String nom) {

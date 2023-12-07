@@ -8,7 +8,6 @@ public class warden extends Ennemi {
         super.pointsDeVie = 100;
         super.force = 30;
     }
-
     @Override
     public void attaquer() {
         super.attaquer();
