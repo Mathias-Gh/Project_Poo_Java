@@ -1,11 +1,12 @@
 package Model.Personnage;
 
 public class Joueur extends Personnage {
-    public String Pseudo;
-    public Boolean genre;
+    public int piece = 0;
 
-    public Joueur(String nom, int pointsDeVie, int force) {
-        super(nom, pointsDeVie, force);
+    public Joueur(String nom) {
+        super(nom);
+        super.pointsDeVie = 10;
+        super.force = 2;
     }
 
     public void equiper(){

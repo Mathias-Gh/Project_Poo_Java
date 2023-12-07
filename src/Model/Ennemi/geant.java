@@ -5,8 +5,10 @@ import Model.Personnage.Personnage;
 public class geant extends Ennemi {
     public String description;
 
-    public geant(String nom1, int pointsDeVie1, int force1) {
-        super(nom1, pointsDeVie1, force1);
+    public geant(String nom) {
+        super(nom);
+        super.pointsDeVie = 50;
+        super.force = 15;
     }
 
     public void ecraser() {
