@@ -36,10 +36,9 @@ public class Joueur extends Personnage {
 
         System.out.println("inventaire: " + listeInventaire);
         try {
-            String objet = listeInventaire.get(2);
-            System.out.println("objet à l index 10 : " + objet);
+            System.out.println("Inventaire: " + listeInventaire.get(0));
         } catch (IndexOutOfBoundsException e) {
-            System.out.println("l index est hors limites");
+            System.out.println("l inventaire est vide");
         }
     }
 
