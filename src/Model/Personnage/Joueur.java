@@ -1,5 +1,7 @@
 package Model.Personnage;
 
+import java.util.ArrayList;
+
 public class Joueur extends Personnage {
     public int piece = 0;
 
@@ -24,6 +26,20 @@ public class Joueur extends Personnage {
         System.out.println("Nom: " + nom);
         System.out.println("Points de vie: " + pointsDeVie);
         System.out.println("Niveau: " + niveau);
+
+        ArrayList<String> listeInventaire = new ArrayList<String>();
+
+        listeInventaire.add("poisson");
+        listeInventaire.add("poisson");
+        listeInventaire.add("poisson");
+        listeInventaire.add("épée bronze");
+
+        System.out.println("inventaire: " + listeInventaire);
+        try {
+            System.out.println("Inventaire: " + listeInventaire.get(0));
+        } catch (IndexOutOfBoundsException e) {
+            System.out.println("l inventaire est vide");
+        }
     }
 
     public static int getNiveau() {
