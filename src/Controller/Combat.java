@@ -1,5 +1,6 @@
 package Controller;
 
+// Tout les imports des autres pages
 import Model.Ennemi.Ennemi;
 import Model.Objet.epee_diamant;
 import Model.Objet.epee_fer;
@@ -16,27 +17,28 @@ import Model.Objet.epee_bois;
 import java.util.Scanner;
 
 public class Combat {
+    // Initialisation d'un combat à l'aide de la méthode start()
     public static void start(Joueur joueur) {
         Scanner scanner = new Scanner(System.in);
-        if (joueur.getNiveau() <= 2) {
+        if (joueur.getNiveau() <= 2) { // Condition du choix de l'ennemi selon le niveau du joueur
             Console.clear();
             zombie zombie = new zombie("zombie", 10, 2);
             TypeText.write("Vous combattez un zombie.\n");
             combat(joueur, zombie);
         }
-        else if (joueur.getNiveau() <= 4 & joueur.getNiveau() > 2) {
+        else if (joueur.getNiveau() <= 4 & joueur.getNiveau() > 2) { // Condition du choix de l'ennemi selon le niveau du joueur
             Console.clear();
             squelette squelette = new squelette("squelette");
             TypeText.write("Vous combattez un squelette.\n");
             combat(joueur, squelette);
         }
-        else if (joueur.getNiveau() <= 6 & joueur.getNiveau() > 4) {
+        else if (joueur.getNiveau() <= 6 & joueur.getNiveau() > 4) { // Condition du choix de l'ennemi selon le niveau du joueur
             Console.clear();
             araignee araignee = new araignee("araignée", 20, 8);
             TypeText.write("Vous combattez une araignée.\n");
             combat(joueur, araignee);
         }
-        else if (joueur.getNiveau() <= 8 & joueur.getNiveau() > 4) {
+        else if (joueur.getNiveau() <= 8 & joueur.getNiveau() > 4) { // Condition du choix de l'ennemi selon le niveau du joueur
             Console.clear();
             warden warden = new warden("warden", 50, 20);
             TypeText.write("Vous combattez le Warden.\n");
@@ -44,14 +46,17 @@ public class Combat {
         }
     }
 
+    // Gestion du déroulement du combat entre le joueur et l'ennemi
     public static void combat(Joueur joueur, Ennemi ennemi) {
         Scanner scanner = new Scanner(System.in);
+        // Tant que l'ennemi à des points de vie, la boucle continue
         while (ennemi.getPointsDeVie() > 0) {
             System.out.println("C'est votre tour:");
             System.out.println("1. Attaquer");
             System.out.println("2. Ne rien faire");
             System.out.println("Choisissez une option:");
             int option = scanner.nextInt();
+            // Le joueur choisit l'inventaire ou son arme
             if (option == 1) {
                 System.out.println("Voici votre inventaire:");
                 System.out.println(joueur.inventaire);
@@ -76,10 +81,13 @@ public class Combat {
                     }
                 }
             }
+            // Le joueur ne fait rien, il passe son tour
             else if (option == 2) {
             }
             Console.clear();
             System.out.println("Tour de l'adversaire:");
+
+            // L'ennemi attaque de manière aléatoire ou ne fait rien
             int n = (int)(Math.random()*2);
             if (n != 1) {
                 System.out.println("Le " + ennemi.nom + " vous attaque et vous retire " + ennemi.getDegats() + " HP");
@@ -89,8 +97,10 @@ public class Combat {
                 System.out.println("Le " + ennemi.nom + " est passif et ne vous attaque pas.");
             }
 
-            System.out.println(ennemi.getPointsDeVie());
+            System.out.println("Il reste " +ennemi.getPointsDeVie() +" de points de vie à l'ennemi");
         }
+
+        // Le combat est terminé lorque l'ennemi n'a plus de points de vie
         System.out.println("Vous avez gagné le combat.");
         System.out.println("Vous avez gagné un niveau !");
         joueur.niveau += 1;

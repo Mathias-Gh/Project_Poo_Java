@@ -8,6 +8,7 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class PreJeu {
+    // Gestion du menu du pre-jeu à l'aide de la méthode start()
     public static void start() {
         while (true) {
             Scanner scanner = new Scanner(System.in);
@@ -19,6 +20,7 @@ public class PreJeu {
             System.out.println("Choisissez une option:");
             int optionJeu = scanner.nextInt();
 
+            // Création d'un personnage
             if (optionJeu == 1) {
                 System.out.println("Quel est le nom de votre personnage ?");
                 String nomPersonnage = scanner.next();
@@ -30,11 +32,15 @@ public class PreJeu {
                 Jeu.start(Player);
                 break;
             }
+
+            // Charger le personnage déjà existant
             if (optionJeu == 2) {
                 Console.clear(); // Efface la console (le terminal)
                 Jeu.start(ChargerJoueur.start());
                 break;
             }
+
+            // Quitter le menu
             if (optionJeu == 3) {
                 break;
             }

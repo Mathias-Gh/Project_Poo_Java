@@ -8,7 +8,7 @@ import java.util.Scanner;
 public class Boutique {
     public static void open(Joueur player) {
         Scanner scanner = new Scanner(System.in);
-        while (true) {
+        while (true) { // boucle permettant d'afficher le menu de la boutique
             Console.clear();
             System.out.println("Boutique:");
             System.out.println("1. Épée en fer - 2 fer");
@@ -19,8 +19,8 @@ public class Boutique {
             System.out.println("6. Steak - 1 diamant");
             System.out.println("7. Quitter la boutique");
             System.out.println("Veuillez choisir une option (1-7):");
-            int option = scanner.nextInt();
-            if (option == 1) {
+            int option = scanner.nextInt(); // analyse ce qu'écrit le joueur et demande à ce que ce soit un int entre 1 et 7
+            if (option == 1) { // Tout les chemins possibles entre les différents éléments de la boutique
                 if (player.fer >= 2) {
                     player.fer -= 2;
                     player.inventaire.add("epee_fer");
@@ -98,7 +98,8 @@ public class Boutique {
         }
     }
 
-    public static void sleep(int miliseconds) {
+    public static void sleep(int miliseconds) { // Fonction permettant de mettre en pause le programme pendant un certain
+        // temps
         try {
             Thread.sleep(miliseconds);
         } catch (InterruptedException e) {
