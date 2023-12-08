@@ -1,57 +1,95 @@
 package Controller;
 
+import Model.Objet.poulet;
+import Model.Objet.steak;
 import Model.Personnage.Joueur;
 import Utils.Console;
+import Utils.Save;
 import Utils.TypeText;
-import Controller.Combat;
+import Model.Objet.poisson;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 public class Jeu {
-    public static void start() {
+    public static void start(Joueur Player) {
         while (true) {
             Scanner scanner = new Scanner(System.in);
-            Console.clear(); // Efface la console (le terminal)
-            System.out.println("Menu du jeu:");
-            System.out.println("1. Créer un personnage");
-            System.out.println("2. Charger un personnage");
-            System.out.println("3. Quitter");
+            Console.clear();
+            TypeText.write("Bonjour " + Player.nom + ", quel action souhaites-tu faire ?");
+            System.out.println("\n");
+            System.out.println("1. Combattre");
+            System.out.println("2. Miner");
+            System.out.println("3. Manger");
+            System.out.println("4. Boutique");
+            System.out.println("5. Infos");
+            System.out.println("6. Sauvegarder et quitter le jeu");
             System.out.println("Choisissez une option:");
-            int optionJeu = scanner.nextInt();
+            int optionJoueur = scanner.nextInt();
+            if (optionJoueur == 1) {
+                Combat.start(Player);
+            }
+            else if (optionJoueur == 2) {
+                // Miner
+            }
+            else if (optionJoueur == 3) {
+                String[] nourriture = {"poisson", "poulet", "steak"};
+                boolean nourritureExist = false;
+                for (String n : nourriture) {
+                    if (!Player.inventaire.contains(n)) {
+                        nourritureExist = true;
+                        break; // Sortir de la boucle dès qu'un aliment est trouvé dans l'inventaire
+                    }
+                }
 
-            if (optionJeu == 1) {
-                System.out.println("Quel est le nom de votre personnage ?");
-                String nomPersonnage = scanner.next();
-                Joueur Player = new Joueur(nomPersonnage);
-                Console.clear(); // Efface la console (le terminal)
-                TypeText.write("Bonjour " + Player.nom + ", quel action souhaites-tu faire ?");
-                System.out.println("\n");
-                System.out.println("1. Combattre");
-                System.out.println("2. Miner");
-                System.out.println("3. Boutique");
-                System.out.println("4. Quitter le jeu");
-                System.out.println("Choisissez une option:");
-                int optionJoueur = scanner.nextInt();
-                if (optionJoueur == 1) {
-                    Combat.start();
-                    break;
+                if (nourritureExist) {
+                    System.out.println("Voici votre inventaire:");
+                    System.out.println(Player.inventaire);
+                    System.out.println("Que souhaitez-vous manger ?");
+                    String manger = scanner.next();
+                    if (Player.inventaire.contains(manger)) {
+                        switch (manger) {
+                            case "poisson" -> {
+                                poisson poisson = new poisson("poisson");
+                                poisson.interagir(Player);
+                                Player.inventaire.remove("poisson");
+                            }
+                            case "poulet" -> {
+                                poulet poulet = new poulet("poulet");
+                                poulet.interagir(Player);
+                                Player.inventaire.remove("poulet");
+                            }
+                            case "steak" -> {
+                                steak steak = new steak("steak");
+                                steak.interagir(Player);
+                                Player.inventaire.remove("steak");
+                            }
+                        }
+                    }
                 }
-                else if (optionJoueur == 2) {
-                    // Miner
-                }
-                else if (optionJoueur == 3) {
-                    // Boutique
-                }
-                else if (optionJoueur == 4) {
-                    break;
+                else {
+                    System.out.println("Vous n'avez pas de nourriture dans votre inventaire.");
+                    try {
+                        Thread.sleep(2000);
+                    } catch (InterruptedException e) {
+                        throw new RuntimeException(e);
+                    }
                 }
             }
-            if (optionJeu == 2) {
-                Console.clear(); // Efface la console (le terminal)
-                System.out.println("Charger personnage");
-                break;
+            else if (optionJoueur == 4) {
+                Boutique.open(Player);
+                try {
+                    Thread.sleep(2000);
+                } catch (InterruptedException e) {
+                    throw new RuntimeException(e);
+                }
             }
-            if (optionJeu == 3) {
+            else if (optionJoueur == 5) {
+                Player.profil();
+            }
+            else if (optionJoueur == 6) {
+                Save.game(Player);
                 break;
             }
         }

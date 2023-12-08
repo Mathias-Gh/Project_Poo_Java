@@ -4,13 +4,15 @@ import java.util.ArrayList;
 
 public class araignee extends Ennemi{
     public String description;
+    public int pointsDeVie;
+    public int degats;
 
-    public araignee(String nom) {
+    public araignee(String nom, int pointsDeVie, int degats) {
         super(nom);
-        super.pointsDeVie = 10;
-        super.force = 2;
+        this.description = "Une araignée";
+        this.pointsDeVie = pointsDeVie;
+        this.degats = degats;
     }
-
     public void profil (){
         System.out.println("araignée");
 
@@ -26,8 +28,21 @@ public class araignee extends Ennemi{
         }
     }
 
-
     public void attaquer() {
         super.attaquer();
+    }
+
+    @Override
+    public int getPointsDeVie() {
+        return pointsDeVie;
+    }
+
+    @Override
+    public void setPointsDeVie(int pointsDeVie) {
+        this.pointsDeVie = pointsDeVie;
+    }
+
+    public int getDegats() {
+        return degats;
     }
 }

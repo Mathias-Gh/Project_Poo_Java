@@ -4,13 +4,15 @@ import java.util.ArrayList;
 
 public class squelette extends Ennemi{
     public String description;
+    public int pointsDeVie;
+    int degats;
 
-    public squelette(String nom) {
+    public squelette(String nom/**, int pointsDeVie, int degats**/) {
         super(nom);
-        super.pointsDeVie = 10;
-        super.force = 2;
+        this.description = "Un squelette";
+        this.pointsDeVie = 15;
+        this.degats = 5;
     }
-
     public void profil (){
         System.out.println("squelette");
 
@@ -28,5 +30,19 @@ public class squelette extends Ennemi{
 
     public void attaquer() {
         super.attaquer();
+    }
+
+    @Override
+    public int getPointsDeVie() {
+        return pointsDeVie;
+    }
+
+    @Override
+    public void setPointsDeVie(int pointsDeVie) {
+        this.pointsDeVie = pointsDeVie;
+    }
+
+    public int getDegats() {
+        return degats;
     }
 }
