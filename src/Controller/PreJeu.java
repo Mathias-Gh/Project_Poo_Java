@@ -9,6 +9,7 @@ import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class PreJeu {
+    // Gestion du menu du pre-jeu à l'aide de la méthode start()
     public static void start() {
         Scanner scanner = new Scanner(System.in);
         int optionJeu;
@@ -34,6 +35,7 @@ public class PreJeu {
                 continue;
             }
 
+            // Création d'un personnage
             if (optionJeu == 1) {
                 System.out.println("Quel est le nom de votre personnage ?");
                 String nomPersonnage = scanner.next();
@@ -45,11 +47,13 @@ public class PreJeu {
                 Jeu.start(Player);
                 break;
             }
+            // Charger le personnage déjà existant
             else if (optionJeu == 2) {
                 Console.clear(); // Efface la console (le terminal)
                 Jeu.start(ChargerJoueur.start());
                 break;
             }
+            // Quitter le menu
             else if (optionJeu == 3) {
                 break;
             }

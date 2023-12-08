@@ -6,6 +6,7 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Joueur extends Personnage {
+    // Attributs de la classe
     public int pointsDeVie;
     public int niveau;
     public ArrayList<String> inventaire;
@@ -13,7 +14,10 @@ public class Joueur extends Personnage {
     public int or;
     public int diamant;
 
+
     public Joueur(String nom, int pointsDeVie, int niveau, int fer, int or, int diamant, ArrayList<String> inventaire) {
+        // Constructeur
+
         super(nom);
         this.pointsDeVie = pointsDeVie;
         this.niveau = niveau;
@@ -22,6 +26,7 @@ public class Joueur extends Personnage {
         this.diamant = diamant;
         this.inventaire = inventaire;
     }
+
 
     @Override
     public void attaquer() {

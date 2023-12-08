@@ -14,6 +14,7 @@ import java.util.List;
 import java.util.Scanner;
 
 public class Jeu {
+    // Initialisation du lancement du jeu avec la méthode start
     public static void start(Joueur Player) {
         Scanner scanner = new Scanner(System.in);
         int optionJoueur;
@@ -55,8 +56,9 @@ public class Jeu {
                     throw new RuntimeException(e);
                 }
             }
-            else if (optionJoueur == 3) {
-                String[] nourriture = {"poisson", "poulet", "steak"};
+            else if (optionJoueur == 3) { // vérification de la nourriture dans l'inventaire
+                String[] nourriture = {"poisson", "poulet", "steak"}; // tableau listant les types de nourritures
+                // disponibles
                 boolean nourritureExist = false;
                 for (String n : nourriture) {
                     if (Player.inventaire.contains(n)) {
@@ -71,6 +73,7 @@ public class Jeu {
                     System.out.println(Player.inventaire);
                     System.out.println("Que souhaitez-vous manger ?");
                     String manger = scanner.next();
+                    // Switch sur le type de nourriture choisie
                     if (Player.inventaire.contains(manger)) {
                         switch (manger) {
                             case "poisson" -> {
@@ -103,14 +106,14 @@ public class Jeu {
                     sleep(2000);
                 }
             }
-            else if (optionJoueur == 4) {
+            else if (optionJoueur == 4) { // Ouverture de la boutique
                 Boutique.open(Player);
                 sleep(2000);
             }
-            else if (optionJoueur == 5) {
+            else if (optionJoueur == 5) { // Affiche le profil du joueur
                 Player.profil();
             }
-            else if (optionJoueur == 6) {
+            else if (optionJoueur == 6) { // Sauvegarde et quitte le jeu
                 Save.game(Player);
                 break;
             }
@@ -121,9 +124,11 @@ public class Jeu {
         }
     }
 
-    public static void sleep(int miliseconds) {
+
+    public static void sleep(int milliseconds) { // Fonction permettant de mettre en pause le programme pendant un certain
+        // temps
         try {
-            Thread.sleep(miliseconds);
+            Thread.sleep(milliseconds);
         } catch (InterruptedException e) {
             throw new RuntimeException(e);
         }

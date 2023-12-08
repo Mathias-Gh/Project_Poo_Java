@@ -6,11 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="bba6e573-1cb0-4109-969b-0594877549e7" name="Changes" comment="correction profil joueur Story 6">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/Combat.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/Combat.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/PreJeu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/PreJeu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Model/Objet/epee_or.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/Objet/epee_or.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Model/Personnage/Joueur.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/Personnage/Joueur.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,7 +61,8 @@
     "settings.editor.selected.configurable": "preferences.pluginManager",
     "vue.rearranger.settings.migration": "true"
   }
-}]]></component>
+}]]>
+  <component name="RunManager">
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\pennm\GITRepo\Project_Poo_Java\src\Utils" />
@@ -95,7 +91,6 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.ChargementMinage" />
         <item itemvalue="Application.Main2" />
       </list>
     </recent_temporary>
@@ -111,7 +106,6 @@
       <workItem from="1701875285681" duration="157000" />
       <workItem from="1701875460285" duration="3827000" />
       <workItem from="1701891975001" duration="8297000" />
-      <workItem from="1701978225192" duration="17008000" />
     </task>
     <task id="LOCAL-00001" summary="continue Story 6">
       <option name="closed" value="true" />
@@ -138,7 +132,6 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="continue Story 6" />
     <MESSAGE value="correction profil joueur Story 6" />
-    <MESSAGE value="Story 7 in progress" />
-    <option name="LAST_COMMIT_MESSAGE" value="Story 7 in progress" />
+    <option name="LAST_COMMIT_MESSAGE" value="correction profil joueur Story 6" />
   </component>
 </project>
