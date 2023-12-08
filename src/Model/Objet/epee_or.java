@@ -11,6 +11,6 @@ public class epee_or extends ObjetDuJeu implements Interactuable {
     }
     @Override
     public void interagir(Personnage ennemi) {
-        ennemi.setPointsDeVie(ennemi.getPointsDeVie() - 5);
+        ennemi.setPointsDeVie(ennemi.getPointsDeVie() - 20);
     }
 }

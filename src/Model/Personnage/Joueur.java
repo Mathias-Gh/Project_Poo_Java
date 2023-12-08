@@ -6,9 +6,8 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Joueur extends Personnage {
-    // attribut de la classe
-
-    public int PointsDeVie;
+    // Attributs de la classe
+    public int pointsDeVie;
     public int niveau;
     public ArrayList<String> inventaire;
     public int fer;
@@ -40,7 +39,7 @@ public class Joueur extends Personnage {
     }
 
     public int getPointsDeVie() {
-        return PointsDeVie;
+        return pointsDeVie;
     }
 
     public int getNiveau() {

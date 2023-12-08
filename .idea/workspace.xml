@@ -6,20 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="bba6e573-1cb0-4109-969b-0594877549e7" name="Changes" comment="correction profil joueur Story 6">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/Boutique.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/Boutique.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/Combat.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/Combat.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/Jeu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/Jeu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/Mine.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/Mine.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/PreJeu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/PreJeu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Interface/Interactuable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Interface/Interactuable.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Model/Ennemi/Ennemi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/Ennemi/Ennemi.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Model/Ennemi/araignee.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/Ennemi/araignee.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Model/Ennemi/squelette.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/Ennemi/squelette.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Model/Ennemi/warden.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/Ennemi/warden.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Model/Ennemi/zombie.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/Ennemi/zombie.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Model/Objet/epee_bois.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/Objet/epee_bois.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Model/Personnage/Joueur.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/Personnage/Joueur.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Utils/ChargerJoueur.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Utils/ChargerJoueur.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,7 +47,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "partComment",
+    "git-widget-placeholder": "catch__exeption",
     "ignore.virus.scanning.warn.message": "true",
     "last_opened_file_path": "C:/Users/pennm/Desktop/JetBrains-Discord-Integration-1.12.0.zip",
     "node.js.detected.package.eslint": "true",
@@ -75,8 +61,27 @@
     "settings.editor.selected.configurable": "preferences.pluginManager",
     "vue.rearranger.settings.migration": "true"
   }
-}]]></component>
+}]]>
   <component name="RunManager">
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\pennm\GITRepo\Project_Poo_Java\src\Utils" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.ChargementMinage">
+    <configuration name="ChargementMinage" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Utils.ChargementMinage" />
+      <module name="Project_Poo_Java" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Utils.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Main2" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main2" />
       <module name="Project_Poo_Java" />
