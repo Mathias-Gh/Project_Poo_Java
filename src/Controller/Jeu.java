@@ -31,19 +31,27 @@ public class Jeu {
                 Combat.start(Player);
             }
             else if (optionJoueur == 2) {
-                // Miner
+                Console.clear();
+                System.out.println("Minage en cours...");
+                Mine.start(Player);
+                try {
+                    Thread.sleep(3000);
+                } catch (InterruptedException e) {
+                    throw new RuntimeException(e);
+                }
             }
             else if (optionJoueur == 3) {
                 String[] nourriture = {"poisson", "poulet", "steak"};
                 boolean nourritureExist = false;
                 for (String n : nourriture) {
-                    if (!Player.inventaire.contains(n)) {
+                    if (Player.inventaire.contains(n)) {
                         nourritureExist = true;
                         break; // Sortir de la boucle dès qu'un aliment est trouvé dans l'inventaire
                     }
                 }
 
                 if (nourritureExist) {
+                    Console.clear();
                     System.out.println("Voici votre inventaire:");
                     System.out.println(Player.inventaire);
                     System.out.println("Que souhaitez-vous manger ?");
@@ -54,36 +62,35 @@ public class Jeu {
                                 poisson poisson = new poisson("poisson");
                                 poisson.interagir(Player);
                                 Player.inventaire.remove("poisson");
+                                System.out.println("Vous savourez votre poisson..");
                             }
                             case "poulet" -> {
                                 poulet poulet = new poulet("poulet");
                                 poulet.interagir(Player);
                                 Player.inventaire.remove("poulet");
+                                System.out.println("Vous savourez votre poulet..");
                             }
                             case "steak" -> {
                                 steak steak = new steak("steak");
                                 steak.interagir(Player);
                                 Player.inventaire.remove("steak");
+                                System.out.println("Vous savourez votre steak..");
                             }
                         }
                     }
+                    else {
+                        System.out.println("Cette nourriture ne se trouve pas dans votre inventaire.");
+                    }
+                    sleep(2000);
                 }
                 else {
                     System.out.println("Vous n'avez pas de nourriture dans votre inventaire.");
-                    try {
-                        Thread.sleep(2000);
-                    } catch (InterruptedException e) {
-                        throw new RuntimeException(e);
-                    }
+                    sleep(2000);
                 }
             }
             else if (optionJoueur == 4) {
                 Boutique.open(Player);
-                try {
-                    Thread.sleep(2000);
-                } catch (InterruptedException e) {
-                    throw new RuntimeException(e);
-                }
+                sleep(2000);
             }
             else if (optionJoueur == 5) {
                 Player.profil();
@@ -92,6 +99,14 @@ public class Jeu {
                 Save.game(Player);
                 break;
             }
+        }
+    }
+
+    public static void sleep(int miliseconds) {
+        try {
+            Thread.sleep(miliseconds);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
         }
     }
 }
