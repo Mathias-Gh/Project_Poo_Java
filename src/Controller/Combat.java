@@ -13,6 +13,7 @@ import Model.Ennemi.araignee;
 import Model.Ennemi.warden;
 import Model.Objet.epee_bois;
 
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class Combat {
@@ -47,11 +48,24 @@ public class Combat {
     public static void combat(Joueur joueur, Ennemi ennemi) {
         Scanner scanner = new Scanner(System.in);
         while (ennemi.getPointsDeVie() > 0) {
+            int option;
             System.out.println("C'est votre tour:");
             System.out.println("1. Attaquer");
             System.out.println("2. Ne rien faire");
-            System.out.println("Choisissez une option:");
-            int option = scanner.nextInt();
+            System.out.println("Choisissez une option (1-2):");
+            try {
+                if (scanner.hasNextInt()) {
+                    option = scanner.nextInt();
+                } else {
+                    System.out.println("Veuillez entrer un nombre.");
+                    sleep(3000);
+                    scanner.next(); // Consommer l'entrée invalide
+                    continue;
+                }
+            } catch (InputMismatchException e) {
+                e.printStackTrace(); // Afficher les détails de l'exception pour le débogage
+                continue;
+            }
             if (option == 1) {
                 System.out.println("Voici votre inventaire:");
                 System.out.println(joueur.inventaire);
@@ -88,14 +102,20 @@ public class Combat {
             else {
                 System.out.println("Le " + ennemi.nom + " est passif et ne vous attaque pas.");
             }
-
-            System.out.println(ennemi.getPointsDeVie());
+            System.out.println(joueur.getPointsDeVie());
+            if (joueur.getPointsDeVie() < 1) {
+                System.out.println("Vous avez perdu !");
+                System.exit(1);
+            }
         }
         System.out.println("Vous avez gagné le combat.");
         System.out.println("Vous avez gagné un niveau !");
         joueur.niveau += 1;
+        sleep(3000);
+    }
+    public static void sleep(int miliseconds) {
         try {
-            Thread.sleep(3000);
+            Thread.sleep(miliseconds);
         } catch (InterruptedException e) {
             throw new RuntimeException(e);
         }

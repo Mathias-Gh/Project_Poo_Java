@@ -9,13 +9,15 @@ import Utils.TypeText;
 import Model.Objet.poisson;
 
 import java.util.ArrayList;
+import java.util.InputMismatchException;
 import java.util.List;
 import java.util.Scanner;
 
 public class Jeu {
     public static void start(Joueur Player) {
+        Scanner scanner = new Scanner(System.in);
+        int optionJoueur;
         while (true) {
-            Scanner scanner = new Scanner(System.in);
             Console.clear();
             TypeText.write("Bonjour " + Player.nom + ", quel action souhaites-tu faire ?");
             System.out.println("\n");
@@ -26,7 +28,20 @@ public class Jeu {
             System.out.println("5. Infos");
             System.out.println("6. Sauvegarder et quitter le jeu");
             System.out.println("Choisissez une option:");
-            int optionJoueur = scanner.nextInt();
+            try {
+                // Vérifier si l'entrée est un nombre
+                if (scanner.hasNextInt()) {
+                    optionJoueur = scanner.nextInt();
+                } else {
+                    System.out.println("Veuillez entrer un nombre.");
+                    sleep(3000);
+                    scanner.next(); // Consommer l'entrée invalide
+                    continue;
+                }
+            } catch (InputMismatchException e) {
+                e.printStackTrace(); // Afficher les détails de l'exception pour le débogage
+                continue;
+            }
             if (optionJoueur == 1) {
                 Combat.start(Player);
             }
@@ -98,6 +113,10 @@ public class Jeu {
             else if (optionJoueur == 6) {
                 Save.game(Player);
                 break;
+            }
+            else {
+                System.out.println("Cette option n'existe pas. Veuillez entrer une option valide");
+                sleep(2000);
             }
         }
     }

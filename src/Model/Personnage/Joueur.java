@@ -6,7 +6,7 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Joueur extends Personnage {
-    public int PointsDeVie;
+    public int pointsDeVie;
     public int niveau;
     public ArrayList<String> inventaire;
     public int fer;
@@ -34,7 +34,7 @@ public class Joueur extends Personnage {
     }
 
     public int getPointsDeVie() {
-        return PointsDeVie;
+        return pointsDeVie;
     }
 
     public int getNiveau() {
